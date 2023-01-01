@@ -27,7 +27,7 @@
 
 ## Live View
 
-    ![](demo.gif)
+    ![](./demo.gif)
 
 ### References
 
