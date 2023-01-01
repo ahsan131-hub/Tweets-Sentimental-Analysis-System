@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tweets Sentiments Analysis</title>
+</head>
+
+<link rel="stylesheet" href="{% static 'tweetSentiments/style.css' %}">
+<body>
+<div class="body-div">
+
+    <div class="main">
+        <div class="heading">
+            <h1 id="mainHeading">Tweets Sentiments Analysis System</h1>
+        </div>
+        <div class="main-content">
+
+            <div class="searchBox">
+                <form id="tweet-submit">
+                    <div class="form-group">
+                        <input type="text" id="searchbar" placeholder="Write Keywords Or Tags ">
+                    </div>
+                    <div class="form-group">
+                        <label for="from">from</label>
+                        <input type="date" id="fromDate" placeholder="from "/>
+                        <label for="toDate">To</label>
+                        <input id="toDate" type="date" placeholder="to"/>
+
+                    </div>
+                    <div class="form-group">
+                        <input type="number" id="numberOfTweets" placeholder="Number of Tweet">
+                        <select id="modelSelection" class="selectioModel">
+                            <option value="1">Pretrained Model</option>
+                            <option value="2">Manual Model</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group submit-row">
+                        <button type="submit" class="submit-button" id="submit-btn"> Search tweet</button>
+                    </div>
+                </form>
+
+            </div>
+            <button id="showGraphBtn" class="show-graph"> Show Graph</button>
+        </div>
+    </div>
+    <div class="tweets">
+        <div class="hidden" id="loading-div">loading tweets...</div>
+        <div>
+            <div class="tweets-heading">
+                Scraped Tweets
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="myModal">
+        <canvas id="myChart" width="800" height="400"></canvas>
+    </div>
+
+
+</div>
+<footer>
+    &copy; <em id="date"></em>Muhammad Ahsan | Mujtaba | Rizwan
+</footer>
+</body>
+{% block content %}
+{% endblock content %}
+{% load static %}
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="{% static 'tweetSentiments/main.js' %}"></script>
+{% block javascript %}
+{% endblock javascript %}
+</html>
