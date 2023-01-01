@@ -26,7 +26,7 @@
 * To run application `python3 manage.py runserver`
 
 ## Live View
-![](Tweets-Sentimental-Analysis-System/demo.gif)
+![](demo.gif)
 
 ### References
 
