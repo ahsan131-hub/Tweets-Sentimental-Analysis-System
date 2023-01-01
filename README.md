@@ -27,7 +27,7 @@
 
 ## Live View
 
-    ![](./demo.gif)
+    ![](Tweets-Sentimental-Analysis-System/demo.gif)
 
 ### References
 
